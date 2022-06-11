@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "test-project-20210119"
-  }
+    "default": "my-first-project",
+    "my-first-project": "mystical-tensor-332213"
+  },
+  "targets": {}
 }

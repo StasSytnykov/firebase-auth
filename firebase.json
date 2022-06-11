@@ -1,12 +1,8 @@
 {
   "hosting": {
-    "site": "test-project-20210119",
+    "site": "my-first-project",
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
