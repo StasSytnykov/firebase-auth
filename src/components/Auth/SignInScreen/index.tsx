@@ -1,20 +1,22 @@
-import React, { useContext } from 'react';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import React from 'react';
+// , { useContext }
+// import Container from '@mui/material/Container';
+// import Grid from '@mui/material/Grid';
+// import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import { UIContext } from '../../Unknown/UIContext';
+// import { UIContext } from '../../Unknown/UIContext';
+import Login from './Login';
 
 const SignInScreen: React.FC = () => {
-  const { setAlert } = useContext(UIContext);
+  // const { setAlert } = useContext(UIContext);
 
-  const handleSignIn = React.useCallback(async () => {
-    setAlert({
-      show: true,
-      severity: 'info',
-      message: 'Sign in button was clicked.',
-    });
-  }, [setAlert]);
+  // const handleSignIn = React.useCallback(async () => {
+  //   setAlert({
+  //     show: true,
+  //     severity: 'info',
+  //     message: 'Sign in button was clicked.',
+  //   });
+  // }, [setAlert]);
 
   return (
     <>
@@ -25,7 +27,9 @@ const SignInScreen: React.FC = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Container fixed maxWidth="sm">
+        <Login />
+        {/* <SimpleSnackbar /> */}
+        {/* <Container fixed maxWidth="sm">
           <Grid container>
             <Grid item xs={12}>
               <Button type="button" onClick={handleSignIn}>
@@ -33,7 +37,7 @@ const SignInScreen: React.FC = () => {
               </Button>
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
       </Box>
     </>
   );
