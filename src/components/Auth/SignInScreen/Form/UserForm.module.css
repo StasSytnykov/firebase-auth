@@ -1,19 +1,12 @@
+.logo {
+  margin-bottom: 40px;
+}
+
 .inputThumb {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-}
-
-.inputText {
-  position: absolute;
-  top: 9px;
-  left: 12px;
-
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.15px;
-  margin: 0;
 }
 
 .input {
@@ -31,14 +24,67 @@
   border-radius: 4px 4px 0px 0px;
 }
 
-.button {
-  width: 22px;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.54);
+.inputText {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
 }
 
+.buttonActive {
+  width: 375px;
+  height: 42px;
+  background: #f50057;
+  color: #ffffff;
+
+  /* color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.73;
+  letter-spacing: 0.46px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  transition: background-color 250ms ease-in-out; */
+}
+
+/* .buttonActive:hover {
+  background-color: #df0753;
+} */
+
+/* .buttonNotActive {
+  letter-spacing: 0.46px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.73;
+
+  opacity: 0.5;
+  color: gray;
+  width: 375px;
+  height: 42px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.73;
+} */
+
 .helpfulText {
+  position: absolute;
+  top: 55px;
   color: red;
-  margin: 5px 0 0 0;
   padding-left: 12px;
 }

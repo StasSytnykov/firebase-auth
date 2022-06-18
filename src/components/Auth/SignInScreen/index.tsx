@@ -5,6 +5,7 @@ import React from 'react';
 // import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 // import { UIContext } from '../../Unknown/UIContext';
+import style from './SignInScreen.module.css';
 import Login from './Login';
 
 const SignInScreen: React.FC = () => {
@@ -19,16 +20,17 @@ const SignInScreen: React.FC = () => {
   // }, [setAlert]);
 
   return (
-    <>
+    <Box display="flex">
+      <Box className={style.heroImage} />
       <Box
-        height="100vh"
+        // height="100vh"
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
+        className={style.loginThumb}
       >
         <Login />
-        {/* <SimpleSnackbar /> */}
         {/* <Container fixed maxWidth="sm">
           <Grid container>
             <Grid item xs={12}>
@@ -39,7 +41,7 @@ const SignInScreen: React.FC = () => {
           </Grid>
         </Container> */}
       </Box>
-    </>
+    </Box>
   );
 };
 

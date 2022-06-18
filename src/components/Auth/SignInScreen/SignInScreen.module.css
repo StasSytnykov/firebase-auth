@@ -1,0 +1,11 @@
+.loginThumb {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heroImage {
+  width: 720px;
+  height: 1024px;
+
+  background-image: url('/src/images/hero-image.jpg');
+}

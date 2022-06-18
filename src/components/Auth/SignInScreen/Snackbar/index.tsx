@@ -3,8 +3,7 @@ import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const SimpleSnackbar = () => {
+const SimpleSnackbar: React.FC = () => {
   const [open, setOpen] = React.useState(true);
 
   const handleClose = (
@@ -32,15 +31,13 @@ const SimpleSnackbar = () => {
   );
 
   return (
-    <div>
-      <Snackbar
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        message="You are not registered!"
-        action={action}
-      />
-    </div>
+    <Snackbar
+      open={open}
+      autoHideDuration={6000}
+      onClose={handleClose}
+      message="You are not registered!"
+      action={action}
+    />
   );
 };
 

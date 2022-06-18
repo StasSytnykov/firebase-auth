@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
 import { useHistory } from 'react-router-dom';
+import { Box } from '@mui/material';
+import app from '../../../../common/firebaseApp';
 import UserFormLogin from '../Form';
 import SimpleSnackbar from '../Snackbar';
+import style from './Login.module.css';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const Login = () => {
+const Login: React.FC = () => {
   const [error, setError] = useState(false);
-
+  const [auth, setAuth] = useState(false);
   const { push } = useHistory();
+
   const handleClickLogin = (email: string, password: string) => {
-    firebase
+    setAuth(true);
+    app
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => push('/'))
-      .catch(() => setError(true));
+      .catch(() => {
+        setError(true);
+      });
+    setAuth(false);
     setError(false);
   };
 
   return (
-    <div>
-      <UserFormLogin handleLogin={handleClickLogin} />
+    <Box className={style.loginThumb}>
+      <UserFormLogin handleLogin={handleClickLogin} auth={auth} title="Login" />
       {error && <SimpleSnackbar />}
-    </div>
+    </Box>
   );
 };
 

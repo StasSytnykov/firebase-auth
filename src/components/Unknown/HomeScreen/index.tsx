@@ -1,23 +1,14 @@
-import { Box, Typography, Button } from '@mui/material';
-import firebase from 'firebase/app';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
-import clearFirestoreCache from '../../../common/clearFirestoreCache';
+import ResponsiveAppBar from './AppBar/AppBar';
 
 const HomeScreen: React.FC = () => {
-  const handleClickLogout = () => {
-    clearFirestoreCache();
-    return firebase.auth().signOut();
-  };
-
   return (
-    <Box
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Typography variant="h1">Home page</Typography>
-      <Button onClick={handleClickLogout}>Logout</Button>
+    <Box>
+      <ResponsiveAppBar />
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Typography variant="h1"> </Typography>
+      </Box>
     </Box>
   );
 };
