@@ -1,5 +1,6 @@
 {
   "name": "test-project-20210119",
+  "homepage": "https://StasSytnykov.github.io/firebase-auth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +15,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "firebase": "^8.2.6",
     "formik": "^2.2.6",
+    "gh-pages": "^4.0.0",
     "interactjs": "^1.10.11",
     "qs": "^6.10.1",
     "react": "^17.0.1",
